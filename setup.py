@@ -13,8 +13,8 @@ def read_requirements(filename):
 setup(
     name="transformerkit",
     version="0.1.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Charan Sai Soma",
+    author_email="contact@charansai.dev",  # Update with your actual email
     description="A complete implementation of the Transformer architecture in PyTorch",
     long_description=long_description,
     long_description_content_type="text/markdown",

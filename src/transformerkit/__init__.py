@@ -23,6 +23,12 @@ from .utils import (
     create_target_mask,
     greedy_decode,
 )
+from .visualization import (
+    plot_attention_flow,
+    plot_attention_heatmap,
+    plot_layer_attention,
+    plot_multihead_attention,
+)
 
 __all__ = [
     # Config
@@ -51,4 +57,9 @@ __all__ = [
     "greedy_decode",
     "beam_search_decode",
     "count_parameters",
+    # Visualization
+    "plot_attention_heatmap",
+    "plot_multihead_attention",
+    "plot_layer_attention",
+    "plot_attention_flow",
 ]
