@@ -1,0 +1,54 @@
+"""
+TransformerKit
+
+A complete implementation of the Transformer architecture from the paper
+"Attention Is All You Need" (Vaswani et al., 2017) in PyTorch.
+"""
+
+__version__ = "0.1.0"
+__author__ = "Your Name"
+__license__ = "MIT"
+
+from .config import TransformerConfig, DEFAULT_CONFIG
+from .model import Transformer, create_transformer
+from .attention import MultiHeadAttention, scaled_dot_product_attention
+from .components import PositionalEncoding, PositionWiseFeedForward, LayerNorm
+from .encoder import Encoder, EncoderLayer
+from .decoder import Decoder, DecoderLayer
+from .utils import (
+    create_padding_mask,
+    create_look_ahead_mask,
+    create_target_mask,
+    greedy_decode,
+    beam_search_decode,
+    count_parameters,
+)
+
+__all__ = [
+    # Config
+    "TransformerConfig",
+    "DEFAULT_CONFIG",
+    # Main model
+    "Transformer",
+    "create_transformer",
+    # Attention
+    "MultiHeadAttention",
+    "scaled_dot_product_attention",
+    # Components
+    "PositionalEncoding",
+    "PositionWiseFeedForward",
+    "LayerNorm",
+    # Encoder
+    "Encoder",
+    "EncoderLayer",
+    # Decoder
+    "Decoder",
+    "DecoderLayer",
+    # Utils
+    "create_padding_mask",
+    "create_look_ahead_mask",
+    "create_target_mask",
+    "greedy_decode",
+    "beam_search_decode",
+    "count_parameters",
+]
