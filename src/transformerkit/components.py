@@ -3,9 +3,10 @@ Core components for the Transformer model.
 Includes positional encoding, feed-forward networks, and layer normalization.
 """
 
+import math
+
 import torch
 import torch.nn as nn
-import math
 
 
 class PositionalEncoding(nn.Module):

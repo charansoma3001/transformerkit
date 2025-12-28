@@ -4,8 +4,9 @@ Transformer Decoder implementation.
 
 import torch
 import torch.nn as nn
+
 from transformerkit.attention import MultiHeadAttention
-from transformerkit.components import PositionWiseFeedForward, LayerNorm, PositionalEncoding
+from transformerkit.components import LayerNorm, PositionalEncoding, PositionWiseFeedForward
 
 
 class DecoderLayer(nn.Module):

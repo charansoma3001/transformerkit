@@ -5,15 +5,16 @@ Tests individual components and integration.
 
 import torch
 import torch.nn as nn
+
 from transformerkit import create_transformer
+from transformerkit.attention import MultiHeadAttention, scaled_dot_product_attention
+from transformerkit.components import LayerNorm, PositionalEncoding, PositionWiseFeedForward
 from transformerkit.config import TransformerConfig
-from transformerkit.attention import scaled_dot_product_attention, MultiHeadAttention
-from transformerkit.components import PositionalEncoding, PositionWiseFeedForward, LayerNorm
-from transformerkit.encoder import EncoderLayer, Encoder
-from transformerkit.decoder import DecoderLayer, Decoder
+from transformerkit.decoder import Decoder, DecoderLayer
+from transformerkit.encoder import Encoder, EncoderLayer
 from transformerkit.utils import (
-    create_padding_mask,
     create_look_ahead_mask,
+    create_padding_mask,
     create_target_mask,
     greedy_decode,
 )

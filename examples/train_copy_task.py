@@ -3,14 +3,15 @@ Training script for the Transformer model.
 Demonstrates training on a simple copy task.
 """
 
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import Dataset, DataLoader
-import numpy as np
+from torch.utils.data import DataLoader, Dataset
+
 from transformerkit import create_transformer
-from transformerkit.utils import create_padding_mask, create_target_mask
 from transformerkit.config import TransformerConfig
+from transformerkit.utils import create_padding_mask, create_target_mask
 
 
 class CopyTaskDataset(Dataset):

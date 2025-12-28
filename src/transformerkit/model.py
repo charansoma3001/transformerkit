@@ -5,9 +5,10 @@ Combines encoder and decoder into a full seq2seq transformer.
 
 import torch
 import torch.nn as nn
-from transformerkit.encoder import Encoder
-from transformerkit.decoder import Decoder
+
 from transformerkit.config import TransformerConfig
+from transformerkit.decoder import Decoder
+from transformerkit.encoder import Encoder
 
 
 class Transformer(nn.Module):

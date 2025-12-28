@@ -4,9 +4,10 @@ Demonstrates model creation, training, and inference.
 """
 
 import torch
+
 from transformerkit import create_transformer
-from transformerkit.utils import greedy_decode, create_padding_mask, count_parameters
 from transformerkit.config import TransformerConfig
+from transformerkit.utils import count_parameters, create_padding_mask, greedy_decode
 
 
 def simple_example():

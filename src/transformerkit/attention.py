@@ -3,10 +3,11 @@ Attention mechanisms for the Transformer model.
 Implements scaled dot-product attention and multi-head attention.
 """
 
+import math
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import math
 
 
 def scaled_dot_product_attention(query, key, value, mask=None, dropout=None):
