@@ -1,6 +1,8 @@
 # TransformerKit
 
 [![Tests](https://github.com/charansoma3001/transformerkit/workflows/Tests/badge.svg)](https://github.com/charansoma3001/transformerkit/actions)
+[![PyPI version](https://badge.fury.io/py/transformerkit.svg)](https://pypi.org/project/transformerkit/)
+[![Downloads](https://pepy.tech/badge/transformerkit)](https://pepy.tech/project/transformerkit)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -18,6 +20,12 @@ A complete, educational implementation of the Transformer architecture from the 
 
 ## Installation
 
+### From PyPI (Recommended)
+
+```bash
+pip install transformerkit
+```
+
 ### From Source
 
 ```bash
@@ -32,11 +40,7 @@ pip install -e .
 pip install -e ".[dev]"
 ```
 
-### Using pip (when published)
 
-```bash
-pip install transformerkit
-```
 
 ### Requirements
 
