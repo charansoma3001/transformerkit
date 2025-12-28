@@ -23,12 +23,31 @@ from .utils import (
     create_target_mask,
     greedy_decode,
 )
-from .visualization import (
-    plot_attention_flow,
-    plot_attention_heatmap,
-    plot_layer_attention,
-    plot_multihead_attention,
-)
+
+# Optional visualization imports (requires matplotlib/seaborn)
+try:
+    from .visualization import (
+        plot_attention_flow,
+        plot_attention_heatmap,
+        plot_layer_attention,
+        plot_multihead_attention,
+    )
+
+    _VISUALIZATION_AVAILABLE = True
+except ImportError:
+    _VISUALIZATION_AVAILABLE = False
+
+    # Provide helpful error messages if visualization functions are called
+    def _viz_not_available(*args, **kwargs):
+        raise ImportError(
+            "Visualization functions require matplotlib and seaborn. "
+            "Install with: pip install matplotlib seaborn"
+        )
+
+    plot_attention_heatmap = _viz_not_available
+    plot_multihead_attention = _viz_not_available
+    plot_layer_attention = _viz_not_available
+    plot_attention_flow = _viz_not_available
 
 __all__ = [
     # Config
